@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Orenda</title>
+        <link rel="stylesheet" href="../styles/HomeStyle.css" type="text/css" />
+        <script
+            src="https://kit.fontawesome.com/e52ab3fe21.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <h1>Orenda</h1>
+            <form>
+                <input
+                    class="search-input"
+                    type="search"
+                    placeholder="Search..."
+                />
+            </form>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Companies.html">Companies</a></li>
+                <li><a href="#" onclick="subscribe()">Login</a></li>
+            </ul>
+        </header>
+        <div id="content">
+            <img
+                id="pic"
+                src="../assets/Hero.png"
+                alt="Person"
+                width="30%"
+                height="30%"
+            />
+            <div id="paragraph">
+                <p>
+                    Discover your dream company with Us! Explore top career
+                    opportunities, authentic employee reviews, and comprehensive
+                    salary insights on our platform. Unlock your potential and
+                    navigate the world of employment with ease. Join now and
+                    embark on a fulfilling career journey. Your success is our
+                    mission.
+                </p>
+                <button id="button" onclick="subscribe()">
+                    Start your search
+                </button>
+            </div>
+        </div>
+        <div id="subscriptionModal" class="modal">
+            <div class="modal-content">
+                <i class="fa-solid fa-xmark" onclick="closeModal()"></i>
+                <h2>Subscribe</h2>
+                <div class="popup-inputs">
+                    <i class="fa-solid fa-signature"></i>
+                    <input type="text" placeholder="Name" />
+                </div>
+                <div class="popup-inputs">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" />
+                </div>
+                <button class="subscribeBtn">Subscribe</button>
+            </div>
+        </div>
+        <div id="infoModal" class="modal">
+            <div class="modal-content2">
+                <h2>
+                    One more step , please share an anonymous review of your
+                    current worplace with us !
+                </h2>
+                <div id="infos">
+                    <div class="info">
+                        <input
+                            type="text"
+                            title="company"
+                            placeholder="Company Name"
+                        />
+                    </div>
+                    <div class="info">
+                        <input
+                            type="text"
+                            title="job"
+                            placeholder="Job Title"
+                        />
+                    </div>
+                    <div class="info">
+                        <input
+                            type="text"
+                            title="location"
+                            placeholder="Location"
+                        />
+                    </div>
+                </div>
+                <div id="rating">
+                    <p>Rating</p>
+                    <div class="rating">
+                        <input
+                            type="radio"
+                            id="star5"
+                            name="rating"
+                            value="5"
+                        />
+                        <label for="star5">1</label>
+                        <input
+                            type="radio"
+                            id="star4"
+                            name="rating"
+                            value="4"
+                        />
+                        <label for="star4">2</label>
+                        <input
+                            type="radio"
+                            id="star3"
+                            name="rating"
+                            value="3"
+                        />
+                        <label for="star3">3</label>
+                        <input
+                            type="radio"
+                            id="star2"
+                            name="rating"
+                            value="2"
+                        />
+                        <label for="star2">4</label>
+                        <input
+                            type="radio"
+                            id="star1"
+                            name="rating"
+                            value="1"
+                        />
+                        <label for="star1">5</label>
+                    </div>
+                </div>
+                <input
+                    type="text"
+                    title="review"
+                    id="reviewBox"
+                    placeholder="Write a review..."
+                />
+                <button id="submit" type="submit" class="subscribeBtn">
+                    Submit
+                </button>
+            </div>
+        </div>
+
+        <script>
+            function subscribe() {
+                var modal = document.getElementById("subscriptionModal");
+                modal.style.display = "block";
+            }
+
+            document
+                .querySelector(".subscribeBtn")
+                .addEventListener("click", () => {
+                    document.getElementById("infoModal").style.display =
+                        "block";
+                    document.getElementById("subscriptionModal").style.display =
+                        "none";
+                });
+
+            function subscribing() {
+                alert("Thank you for subscribing!");
+                closeModal();
+            }
+
+            function closeModal() {
+                var modal = document.getElementById("subscriptionModal");
+                modal.style.display = "none";
+            }
+
+            const subscriptionModal =
+                document.getElementById("subscriptionModal");
+            window.addEventListener("click", (event) => {
+                if (event.target === subscriptionModal) {
+                    subscriptionModal.style.display = "none";
+                }
+            });
+
+            document.getElementById("submit").addEventListener("click", () => {
+                window.location.href = "Companies.html";
+            });
+        </script>
+    </body>
+</html>

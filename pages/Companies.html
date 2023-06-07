@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../styles/CompaniesStyle.css"
+      type="text/css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e52ab3fe21.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>Orenda</h1>
+      <form>
+        <input class="search-input" type="search" placeholder="Search..." />
+      </form>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Companies.html">Companies</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </header>
+    <div id="listOfCompanies">
+      <div class="compCol">
+        <div class="company" id="marquardt">
+          <img src="../assets/Marquardt.png" alt="Person" />
+          <div>
+            <h3>Marquardt</h3>
+            <i class="fa-regular fa-star Marquardt"></i>
+            <i class="fa-regular fa-star Marquardt"></i>
+            <i class="fa-regular fa-star Marquardt"></i>
+            <i class="fa-regular fa-star Marquardt"></i>
+            <i class="fa-regular fa-star"></i>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Assumenda adipisci iste quia necessitatibus deserunt? Quibusdam
+              cum ducimus ab a quia magni, dicta maxime voluptates.
+            </p>
+          </div>
+        </div>
+        <div class="company" id="stelia">
+          <img src="../assets/Stelia.jpg" alt="Person" />
+          <div>
+            <h3>Stelia</h3>
+            <i class="fa-regular fa-star Stelia"></i>
+            <i class="fa-regular fa-star Stelia"></i>
+            <i class="fa-regular fa-star Stelia"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Assumenda adipisci iste quia necessitatibus deserunt? Quibusdam
+              cum ducimus ab a quia magni, dicta maxime voluptates.
+            </p>
+          </div>
+        </div>
+        <div class="company" id="segula">
+          <img src="../assets/Segula.jpg" alt="Person" />
+          <div>
+            <h3>Segula</h3>
+            <i class="fa-regular fa-star Segula"></i>
+            <i class="fa-regular fa-star Segula"></i>
+            <i class="fa-regular fa-star Segula"></i>
+            <i class="fa-regular fa-star Segula"></i>
+            <i class="fa-regular fa-star"></i>
+            <p class="desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Assumenda adipisci iste quia necessitatibus deserunt? Quibusdam
+              cum ducimus ab a quia magni, dicta maxime voluptates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById("stelia").addEventListener("click", () => {
+        window.location.href = "Company.html";
+      });
+      document.getElementById("segula").addEventListener("click", () => {
+        window.location.href = "Company.html";
+      });
+      document.getElementById("marquardt").addEventListener("click", () => {
+        window.location.href = "Company.html";
+      });
+    </script>
+  </body>
+</html>

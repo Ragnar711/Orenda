@@ -1,0 +1,108 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    background-color: #333;
+    padding-inline: 20px;
+}
+.search-input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+h1 {
+    background: rgb(151, 217, 225);
+    background: linear-gradient(
+        90deg,
+        rgba(151, 217, 225, 1) 21%,
+        rgba(217, 175, 217, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+input {
+    width: 150%;
+    height: 2.5 rem;
+}
+input:focus {
+    outline: none;
+}
+#review {
+    align-items: center;
+    padding-inline: 20%;
+}
+#listOfCompanies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5%;
+    padding-inline: 10%;
+}
+.company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    border: 1px solid gray;
+    border-radius: 7.5px;
+    margin-bottom: 20px;
+    height: 150px;
+}
+.company:hover {
+    -webkit-box-shadow: 10px 10px 9px -1px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 10px 10px 9px -1px rgba(0, 0, 0, 0.51);
+    box-shadow: 10px 10px 9px -1px rgba(0, 0, 0, 0.51);
+}
+.company > img {
+    width: 100px;
+    height: 100px;
+    margin-inline: 15px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.desc {
+    height: 100px;
+}
+.compCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.Marquardt,
+.Stelia,
+.Segula {
+    color: gold;
+}
